@@ -1,0 +1,210 @@
+{
+  "id": "root",
+  "type": "row",
+  "preview": "layouts/neon-pro.svg",
+  "titlebar": "none",
+  "traffic_lights": [
+    12,
+    16
+  ],
+  "theme": "neon-pro",
+  "font": "SF Mono",
+  "ui_font": ".SystemUIFont",
+  "terminal_padding": [
+    16,
+    14
+  ],
+  "terminal_opacity": 0.92,
+  "background": {
+    "gradient": [
+      "#0d1626",
+      "#06080d"
+    ],
+    "angle": 165
+  },
+  "divider": {
+    "width": 1,
+    "color": "#ffffff0d"
+  },
+  "children": [
+    {
+      "id": "sidebar",
+      "type": "column",
+      "size": {
+        "px": 256
+      },
+      "min": 44,
+      "max": 480,
+      "background": "#090c13eb",
+      "resizable": false,
+      "children": [
+        {
+          "id": "brand",
+          "type": "block",
+          "size": {
+            "px": 86
+          },
+          "window_drag": true,
+          "content": {
+            "mod": "neon-pro-chrome"
+          }
+        },
+        {
+          "id": "sidebar-lists",
+          "type": "column",
+          "divider": {
+            "width": 1,
+            "color": "#ffffff0a"
+          },
+          "children": [
+            {
+              "id": "spaces",
+              "type": "block",
+              "size": {
+                "weight": 1
+              },
+              "min": 90,
+              "content": {
+                "mod": "neon-pro-spaces"
+              }
+            },
+            {
+              "id": "agents",
+              "type": "block",
+              "size": {
+                "weight": 1
+              },
+              "min": 90,
+              "content": {
+                "mod": "neon-pro-agents"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sidebar-footer",
+          "type": "block",
+          "size": {
+            "px": 53
+          },
+          "content": {
+            "mod": "neon-pro-chrome",
+            "props": {
+              "footer": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "type": "column",
+      "resizable": false,
+      "children": [
+        {
+          "id": "tabs",
+          "type": "block",
+          "size": {
+            "px": 44
+          },
+          "window_drag": true,
+          "border": {
+            "width": 1,
+            "color": "#ffffff0a"
+          },
+          "content": {
+            "mod": "neon-pro-tabs"
+          }
+        },
+        {
+          "id": "work-body",
+          "type": "row",
+          "padding": [
+            10,
+            12
+          ],
+          "gap": 12,
+          "children": [
+            {
+              "id": "main",
+              "type": "block",
+              "content": {
+                "tab": "active",
+                "pane": {
+                  "gap": 10,
+                  "radius": 12,
+                  "background": "#0b0f17",
+                  "lone": true,
+                  "border": {
+                    "width": 1,
+                    "color": "#ffffff12"
+                  },
+                  "focus": {
+                    "width": 1,
+                    "color": "#64d2ff59"
+                  },
+                  "header": {
+                    "content": {
+                      "mod": "neon-pro-pane"
+                    },
+                    "height": 34,
+                    "position": "top",
+                    "reveal": "always"
+                  }
+                }
+              }
+            },
+            {
+              "id": "panel",
+              "type": "column",
+              "hidden": true,
+              "size": {
+                "px": 368
+              },
+              "min": 280,
+              "max": 900,
+              "radius": 12,
+              "border": {
+                "width": 1,
+                "color": "#ffffff12"
+              },
+              "children": [
+                {
+                  "id": "panel-body",
+                  "type": "stack",
+                  "active": "files",
+                  "children": [
+                    {
+                      "id": "files",
+                      "type": "block",
+                      "content": {
+                        "mod": "files"
+                      }
+                    },
+                    {
+                      "id": "changes",
+                      "type": "block",
+                      "content": {
+                        "mod": "changes"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "status",
+          "type": "block",
+          "size": {
+            "px": 30
+          },
+          "content": {
+            "mod": "neon-pro-hud"
+          }
+        }
+      ]
+    }
+  ]
+}
